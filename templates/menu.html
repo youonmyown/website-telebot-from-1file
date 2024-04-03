@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню на сьогодні</title>
+    <style>
+        body {
+            background-image: url("static/image.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            position: relative;
+        }
+
+        #logo {
+            position: fixed, top;
+            max-width: 400px; 
+            width: auto; 
+            height: auto; 
+        }
+
+        #menu-header {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        #menu-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            column-count: 2;
+            column-gap: 20px;
+            text-align: left, top;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: rgba(7, 178, 203, 0.1);
+            box-sizing: border-box;
+            box-shadow: 0 0 7px rgba(0,0,0, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-header">Меню на сьогодні</div>
+    <div id="menu-container">
+        <ul>
+            {% for item in menu_items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <img id="logo" src="/static/logo.png" alt="Логотип">
+</body>
+</html>
