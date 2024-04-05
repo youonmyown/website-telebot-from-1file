@@ -3,7 +3,7 @@ name: Docker Build
 on:
   push:
     branches:
-      - origin #MAIN for build
+      - main
 
 jobs:
   build:

@@ -1,9 +1,10 @@
 import telebot
 from telebot import types
 from requests.exceptions import ConnectionError
+from config import TOKEN
 
 # YOUR_BOT_TOKEN
-bot = telebot.TeleBot('BOT_TOKEN')
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
@@ -43,7 +44,7 @@ def handle_message(message):
 if __name__ == '__main__':
     while True:
         try:
-            bot.polling(none_stop=True, interval=0)
+            bot.polling(none_stop=True, interval=3)
         except ConnectionError as e:
             print(f"Connection error during polling: {e}")
             continue
