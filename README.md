@@ -11,7 +11,8 @@ docker build -t <image-name>:latest .
 
 ### Docker run
 ```
-docker run -p 5000:5000 -v $(pwd)/menu.txt:/app/menu.txt <image-name>:latest --restart=unless-stopped
+docker run -p 5000:5000 -v $(pwd)/menu.txt:/app/menu.txt --restart=unless-stopped <image-name>:latest
+
 ```
 
 ### Warning: 

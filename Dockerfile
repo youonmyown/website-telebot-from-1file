@@ -4,6 +4,7 @@ RUN pip install flask telebot
 
 WORKDIR /app
 
+COPY config.py /app/
 COPY site1.py /app/
 COPY menu.txt /app/
 COPY main.py /app/

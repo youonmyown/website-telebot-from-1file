@@ -2,6 +2,7 @@ import telebot
 from telebot import types
 from requests.exceptions import ConnectionError
 from config import TOKEN
+import time
 
 # YOUR_BOT_TOKEN
 bot = telebot.TeleBot(TOKEN)
@@ -47,7 +48,9 @@ if __name__ == '__main__':
             bot.polling(none_stop=True, interval=3)
         except ConnectionError as e:
             print(f"Connection error during polling: {e}")
+            time.sleep(5)
             continue
         except Exception as e:
             print(f"Unhandled error during polling: {e}")
+            time.sleep(5)
             break
