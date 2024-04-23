@@ -65,7 +65,7 @@ def handle_message(message):
 if __name__ == '__main__':
     while True:
         try:
-            bot.polling(none_stop=True, interval=3)
+            bot.infinity_polling(timeout=10, long_polling_timeout = 5)
         except ConnectionError as e:
             print(f"Connection error during polling: {e}")
             time.sleep(5)
