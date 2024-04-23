@@ -4,15 +4,15 @@
 This project was conceived and integrated for a cafe in the medical center where I work. Perhaps someone will find it useful.
 
 ## Usage
-#### Docker Build
+
+Create a `config.py` file in the repository directory and add the line
 ```
-docker build -t <image-name>:latest .
+TOKEN = 'your_bot_token'
 ```
 
 ### Docker run
 ```
-docker run -p 5000:5000 -v $(pwd)/menu.txt:/app/menu.txt --restart=unless-stopped <image-name>:latest
-
+docker compose up -d
 ```
 
 ### Warning: 
